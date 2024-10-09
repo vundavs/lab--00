@@ -17,15 +17,15 @@ We set up the data frame. Edit the data below to include information about your 
 
 ```{r setup-tibble}
 team_data <- tibble(
-  name = c("Peter Rabbit", "member 1", "member 2", 
-           "member 3", "member 4"),
-  github_username = c("mcgregors-garden", "username 1", "username 2", 
-                      "username 3", "username 4"), 
-  colour = c("powderblue", "colour 1", "colour 2", 
-             "colour 3", "colour 4"),
-  hobby = c("Hopping", "hobby 1", "hobby 2", 
-            "hobby 3", "hobby 4"),
-  favourite_number = c(2, NA, NA, NA, NA)
+  name = c("Alice", "Bob", "Charles", 
+           "Dan", "Edith"),
+  github_username = c("alice_01", "bob_02", "charles_03", 
+                      "dan_0", "edith_05"), 
+  colour = c("powderblue", "darkred", "beige", 
+             "navy", "darkgreen"),
+  hobby = c("Hopping", "Dancing", "Partying", 
+            "Reading", "Singing"),
+  favourite_number = c(1, 2, 3, 4, 5)
   )
 
 team_data
@@ -47,19 +47,19 @@ p1
 ```
 
 
-*Remove this text (including the stars), and add your answer for Exercise 18 here.*
+The plot shows the members github usernames plotted against their favourite number with the bars for each person being the colour of their favourite colour.
 
 ### Exercises 19
 
 Change the text of the plot title and axis labels.
 
 ```{r labelled-bar-plot}
-p1 + labs(x = "Insert text here", 
-          y = "Insert text here",
-          title = "Insert text here")
+p1 + labs(x = "github usernames", 
+          y = "favourite number",
+          title = "lab groups github names against their favourite numbers")
 ```
 
-*Remove this text (including the stars), and add your answer for Exercise 19 here.*
+Labs adds labels to the axis and can add a title to the plot.
 
 ### Exercise 20
 
@@ -69,4 +69,4 @@ p2 <- ggplot(team_data, aes(x = hobby)) +
 p2
 ```
 
-*Remove this text (including the stars) and add your answer for Exercise 20 here.*
+The axis for the count has decimal numbers which isn't appropriate cause a fraction of a person cannot have a certain hobby. This data could be represented better using a pictograph possibly.
